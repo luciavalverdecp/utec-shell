@@ -1,0 +1,9 @@
+#!/bin/bash
+# Uso: ./gitpush "mensaje del commit"
+# Si no pasás mensaje, usa "add ejercicio".
+
+msg="${1:-add ejercicio}"
+
+git add . || exit 1
+git commit -m "$msg" || exit 1
+git push
